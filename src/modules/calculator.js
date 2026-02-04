@@ -1,15 +1,26 @@
+const validate = (a, b) => {
+  if (typeof a !== "number" || typeof b !== "number") {
+    throw new Error("invalid input");
+  }
+}
+
 const calculator = {
   add(a, b) {
-    throw new Error("empty values");
+    validate(a, b);
+    return a+b;
   },
   sub(a, b) {
-    throw new Error("empty values");
+    validate(a, b);
+    return a-b;
   },
   mul(a, b) {
-    throw new Error("empty values");
+    validate(a, b);
+    return a*b;
   },
   div(a, b) {
-    throw new Error("empty values");
+    validate(a, b);
+    if (b == 0) throw new Error("division by zero");
+    return a/b;
   },
 };
 
