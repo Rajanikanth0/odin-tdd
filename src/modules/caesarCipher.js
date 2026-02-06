@@ -11,8 +11,6 @@ const shiftChar = (char, key) => {
   return char;
 }
 
-// 
-
 const caesarCipher = (str, key) => {
   return str.split("").map(char => shiftChar(char, key)).join("");
 };

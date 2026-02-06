@@ -13,7 +13,11 @@ test("check for symbols and other chars", () => {
 });
 
 test("check for alpha-numeric-symbols", () => {
-  expect(cipher("aA()1TAa", 2)).toBe("cC()1VCc");
+  expect(cipher("aA()1T Aa", 2)).toBe("cC()1V Cc");
+});
+
+test("check for multi-word string", () => {
+  expect(cipher("apple juice", 5)).toBe("fuuqj oznhj");
 });
 
 test("check for 26th key", () => {
